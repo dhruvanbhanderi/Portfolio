@@ -1,0 +1,325 @@
+/* =========================
+   Imports & Variables
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;700&display=swap');
+:root {
+    --primary: #2d5af7;
+    --secondary: #4c6ef5;
+    --accent: #f7971e;
+    --bg: #f7f9fb;
+    --text: #22223b;
+    --card-bg: rgba(255,255,255,0.85);
+    --glass-border: rgba(44,62,80,0.08);
+    --shadow: 0 4px 24px rgba(44,62,80,0.08);
+    --transition: all 0.25s cubic-bezier(.77,0,.18,1);
+    --radius: 16px;
+}
+
+/* =========================
+   Base & Typography
+========================= */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding-top: 80px;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* =========================
+   Navigation
+========================= */
+.glass-nav {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--primary);
+}
+.logo-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-left: 6px;
+    display: inline-block;
+}
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.nav-link.active, .nav-link:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* =========================
+   Hero Section
+========================= */
+.hero-section {
+    background: linear-gradient(120deg, #e9f0ff 0%, #f7f9fb 100%);
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+.hero-content {
+    animation: fadeUp 0.8s cubic-bezier(.77,0,.18,1) both;
+}
+.hero-image .image-wrapper {
+    box-shadow: 0 4px 16px rgba(44,62,80,0.10);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(.77,0,.18,1), box-shadow 0.3s;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+}
+.hero-image .image-wrapper img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+    background: #fff;
+    display: block;
+}
+.hero-image .image-wrapper:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+}
+
+/* =========================
+   Cards & Components
+========================= */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: var(--transition);
+}
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+/* =========================
+   Stats Section
+========================= */
+.stats-grid {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0 1rem 0;
+}
+.stat-box {
+    background: var(--card-bg);
+    border: 1px solid var(--primary);
+    box-shadow: 0 1px 6px rgba(44,62,80,0.06);
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.stat-box:hover {
+    transform: scale(1.04);
+    background: var(--primary);
+    color: #fff;
+}
+
+/* =========================
+   Buttons
+========================= */
+.cta-group .btn-primary {
+    background: transparent;
+    color: var(--primary);
+    border: none;
+    box-shadow: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+.cta-group .btn-primary:hover {
+    background: var(--primary);
+    color: #fff;
+}
+.cta-group .btn-outline {
+    border: none;
+    color: var(--primary);
+    background: transparent;
+    font-weight: 600;
+}
+.cta-group .btn-outline:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* =========================
+   Projects Grid & Cards
+========================= */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    margin-top: 1.5rem;
+}
+.project-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 8px rgba(44,62,80,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+    animation: fadeUp 0.7s cubic-bezier(.77,0,.18,1);
+}
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(44,62,80,0.12);
+}
+.project-card .card-inner {
+    position: relative;
+    padding: 1.2rem;
+}
+.project-card .card-front img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+.project-card .card-front h3 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+.project-card .card-back {
+    margin-top: 0.7rem;
+    font-size: 0.98rem;
+    color: var(--text);
+}
+.project-card .tags {
+    margin: 0.4rem 0;
+}
+.project-card .tag {
+    background: var(--primary);
+    color: #fff;
+    border-radius: 10px;
+    padding: 0.15rem 0.7rem;
+    margin-right: 0.3rem;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+.project-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.project-link:hover {
+    color: var(--primary);
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-up {
+    animation: fadeUp 0.7s cubic-bezier(.77,0,.18,1) both;
+}
+
+/* =========================
+   Forms
+========================= */
+.glass-input {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+/* =========================
+   Custom Cursor
+========================= */
+.cursor, .cursor.active {
+    display: none !important;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 768px) {
+    .gradient-text {
+        font-size: 2rem;
+    }
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
+}
