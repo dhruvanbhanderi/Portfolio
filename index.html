@@ -3,165 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Portfolio</title>
+    <title>Dhruvan Bhanderi | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="modern.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <header class="glass-nav">
-        <nav class="container nav-container">
+    <!-- Header Navigation -->
+    <nav class="glass-nav">
+        <div class="container nav-container">
             <div class="logo-box">
-                <span class="logo-text">DB</span>
-                <span class="logo-dot"></span>
+                Dhruvan<span class="logo-dot"></span>
             </div>
             <div class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#work" class="nav-link">Projects</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </div>
-        </nav>
+            <button class="nav-toggle" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Header / Hero -->
+    <header class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1 class="gradient-text">Dhruvan Bhanderi</h1>
+                <h2 class="hero-tagline">Software Developer & Computer Engineering Student</h2>
+                <p class="hero-desc">Building modern web apps, machine learning models, and cloud solutions.</p>
+                <div class="hero-socials">
+                    <a href="https://github.com/dhruvanbhanderi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dhruvan-bhanderi-774415319" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="profile.jpg" alt="Dhruvan Bhanderi profile photo">
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero-section">
-            <div class="container grid-2">
-                <div class="hero-content" data-animation="fadeUp">
-                    <h1 class="gradient-text">Hi, I'm 
-                        <span class="highlight">Dhruvan Bhanderi</span>
-                    </h1>
-                    <p class="lead">Computer Engineering Student & Software Developer</p>
-                    <div class="stats-grid">
-                        <div class="stat-box glass-card">
-                            <span class="stat-number">8.79</span>
-                            <span class="stat-label">CGPA</span>
-                        </div>
-                        <div class="stat-box glass-card">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Projects</span>
-                        </div>
-                    </div>
-                    <div class="cta-group">
-                        <a href="#work" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="ml">ML/AI</button>
+            </div>
+            <div class="projects-grid">
+                <!-- Project cards rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section glass-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Dart</span>
                     </div>
                 </div>
-                <div class="hero-image" data-animation="fadeLeft">
-                    <div class="image-wrapper glass-card">
-                        <img src="profile.jpg" alt="Profile">
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Web</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">JSP</span>
+                        <span class="skill-tag">.NET</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Tech</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Cloud Computing</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="section glass-section">
-            <div class="container">
-                <h2 class="section-title" data-animation="fadeUp">About Me</h2>
-                <div class="grid-2">
-                    <div class="about-content glass-card" data-animation="fadeRight">
-                        <p>Dedicated Computer Engineering student with a strong background in software development, cloud technologies, and machine learning. Proficient in optimizing algorithms, database management, and developing predictive models.</p>
-                    </div>
-                    <div class="education-box glass-card" data-animation="fadeLeft">
-                        <h3>Education</h3>
-                        <div class="edu-item">
-                            <h4>Bachelor of Engineering in Computer Engineering</h4>
-                            <p>G H Patel College of Engineering & Technology</p>
-                            <p>CGPA: 8.79 | Aug '22 – Jun '26 (Pursuing)</p>
-                        </div>
-                    </div>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container about-grid">
+            <div class="about-content">
+                <h2 class="section-title">About Me</h2>
+                <p>I'm Dhruvan Bhanderi, a Computer Engineering student passionate about building impactful software. I love working on web apps, optimizing algorithms, and exploring AI/ML. I enjoy collaborating, learning new tech, and solving real-world problems.</p>
+            </div>
+            <div class="education-box">
+                <h3>Education</h3>
+                <div class="edu-item">
+                    <h4>B.E. in Computer Engineering</h4>
+                    <p>G H Patel College of Engineering & Technology</p>
+                    <p>CGPA: 8.79 | Aug '22 – Jun '26 (Pursuing)</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Projects Section -->
-        <section id="work" class="section">
-            <div class="container">
-                <h2 class="section-title" data-animation="fadeUp">Featured Work</h2>
-                <div class="filter-tabs">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="ml">ML/AI</button>
+    <!-- Contact -->
+    <section id="contact" class="section glass-section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-grid">
+                    <input type="email" class="glass-input" placeholder="Your Email" required>
+                    <textarea class="glass-input" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        Send <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
-                <div class="projects-grid">
-                    <!-- Projects loaded via JS -->
-                </div>
-            </div>
-        </section>
+            </form>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section glass-section">
-            <div class="container">
-                <h2 class="section-title">Technical Arsenal</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">C/C++</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">Dart</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Web Technologies</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">HTML</span>
-                            <span class="skill-tag">CSS</span>
-                            <span class="skill-tag">PHP</span>
-                            <span class="skill-tag">JSP</span>
-                            <span class="skill-tag">.NET</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools & Technologies</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">VS Code</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Cloud Computing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <div class="contact-wrapper glass-card">
-                    <h2 class="section-title">Let's Connect</h2>
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-grid">
-                            <input type="email" class="glass-input" placeholder="Your Email">
-                            <textarea class="glass-input" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn-primary">
-                                Send Message
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer -->
     <footer class="glass-footer">
         <div class="container">
-            <p>© 2023 Dhruvan Bhanderi. All rights reserved.</p>
+            <p>© 2025 Dhruvan Bhanderi. All rights reserved.</p>
             <div class="social-links">
                 <a href="https://github.com/dhruvanbhanderi" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/dhruvan-bhanderi-774415319" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
-
-    <div class="cursor"></div>
     <script src="script.js"></script>
 </body>
 </html>
